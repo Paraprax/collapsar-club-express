@@ -18,9 +18,9 @@ app.use(express.json());
 //point our server to a series of 'route' files, giving it a map of how to respond to requests from the client
 
 require("./routes_controller/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require("./routes_controller/htmlRoutes")(app);
 
 //listener (to start our server when this whole files is run, ie. by node)
 app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
+    console.log("Green light! App listening on PORT: " + PORT);
 });
