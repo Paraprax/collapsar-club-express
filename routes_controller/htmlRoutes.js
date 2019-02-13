@@ -3,7 +3,6 @@
 var path = require("path");
 
 //Routing
-
 module.exports = function(app) {
     //handle 'get' requests eg. when a user visits a page via a url pathway, serve them the homepage html file
 
