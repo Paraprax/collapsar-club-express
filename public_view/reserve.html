@@ -27,7 +27,7 @@
       <div class="text-center">
         <a href="/booths">
           <button class="btn btn-lg btn-primary">
-            <span class="fa fa-list-alt"></span> View Tables</button>
+            <span class="fa fa-list-alt"></span> View Booths</button>
         </a>
         <a href="/">
           <button class="btn btn-lg btn-default">
@@ -72,7 +72,7 @@
     <footer class="footer">
       <div class="container">
         <p>
-          <a href="/api/booths">API Table Link</a> |
+          <a href="/api/tables">API Booths Link</a> |
           <a href="/api/waitlist">API Wait List</a>
       </div>
     </footer>
@@ -108,7 +108,7 @@
     // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
     // depending on if a booths is available or not.
 
-    $.post("/api/booths", newReservation,
+    $.post("/api/tables", newReservation,
       function(data) {
 
         // If a table is available... tell user they are booked.
@@ -116,7 +116,7 @@
           alert("Yay! You are officially booked!");
         }
 
-        // If a table is available... tell user they on the waiting list.
+        // If a table is unavailable... tell user they on the waiting list.
         else {
           alert("Sorry you are on the wait list");
         }

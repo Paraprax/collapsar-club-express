@@ -19,7 +19,7 @@ module.exports = function(app){
     })
 
     //when our express server(app) receives a 'post' request from a client to this route
-    app.post("api/tables", function(req, res){
+    app.post("/api/tables", function(req, res){
         
         if (tableData.length < 5) { //if the tableData array has less than five bookings in it
             tableData.push(req.body); //the data in the post request will get added to that array
